@@ -1,0 +1,12 @@
+message:
+  #message pour le /test
+  test: "&c&l[Serveur] §rCeci est une commande de test ! &3&l:D"
+kits:
+  admin:
+    id: 1
+  player:
+    id : 25
+badwords:
+  - "fdp"
+  - "Metaloul"
+  - "tarpin"
