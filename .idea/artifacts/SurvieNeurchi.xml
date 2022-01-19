@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SurvieNeurchi">
+    <output-path>$USER_HOME$/AppData/Roaming/Fork/servers/Serveur Neurchi Dev/plugins</output-path>
+    <root id="archive" name="SurvieNeurchi.jar">
+      <element id="module-output" name="Dev Neurchi Survie" />
+    </root>
+  </artifact>
+</component>

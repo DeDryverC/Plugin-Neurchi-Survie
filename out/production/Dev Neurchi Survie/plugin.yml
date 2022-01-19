@@ -1,0 +1,25 @@
+name: SurvieNeurchi
+version: 1.0
+author: OinkOinkTTV
+main: fr.oinkoink.neurchi.survie.MainEvent
+api-version: 1.13
+commands:
+  changelog:
+    aliases: [changel,clog,cl]
+    description: Affichage des changelogs
+    permission: ndmsurvie.changelog
+  bravo:
+    description: Felicite un joueur
+    aliases: gg, bv
+    permission: ndmsurvie.bravo
+  mod:
+    description: Aucune idée
+    aliases: modifs, menu
+    permission: ndmsurvie.mod
+  mp:
+    description: Envoie d'un message vers un joueur
+    aliases: [m,msg,message]
+    permission: ndmsurvie.mp
+  tpflat:
+    description: teleportation vers la map test
+    permission: ndmsurvie.tpflat
