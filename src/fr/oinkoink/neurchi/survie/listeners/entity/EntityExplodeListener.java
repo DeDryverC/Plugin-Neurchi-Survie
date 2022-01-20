@@ -5,6 +5,7 @@ import fr.oinkoink.neurchi.survie.utils.Randomizer;
 import org.bukkit.Color;
 import org.bukkit.FireworkEffect;
 import org.bukkit.Location;
+import org.bukkit.block.data.type.TNT;
 import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -19,20 +20,25 @@ public class EntityExplodeListener implements Listener {
 
     @EventHandler
     public void onEntityExplode(ExplosionPrimeEvent event) {
-        LivingEntity entity = (LivingEntity) event.getEntity();
+        Entity entity = event.getEntity();
 
         EntityType entityType = entity.getType();
         Location entityLoc = entity.getLocation();
-        Player player = entity.getKiller();
 
 
         if (entity instanceof Creeper) {
+            LivingEntity livingEntity = (LivingEntity) event.getEntity();
             if(Randomizer.getPercentage(7.5D)) {
                 Location fwLoc = entityLoc;
                 fwLoc.setY(entityLoc.getY() +1 );
                 event.setCancelled(true);
-                entity.damage(100.0D);
-                FireWorkBuilder firework = new FireWorkBuilder(entity, fwLoc, 0);
+                livingEntity.damage(100.0D);
+                FireWorkBuilder firework = new FireWorkBuilder(livingEntity, fwLoc, 0);
+            }
+        }
+        if(entity instanceof TNTPrimed){
+            if(Randomizer.getPercentage(5.0D)){
+                event.setCancelled(true);
             }
         }
 
